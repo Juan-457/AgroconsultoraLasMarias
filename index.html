@@ -87,12 +87,21 @@
     /* ---------- Hero ---------- */
     .hero {
       position: relative; color: #fff; overflow: hidden;
+      background-color: var(--navy-deep);
+    }
+    .hero::before {
+      content: ""; position: absolute; inset: 0; z-index: 0;
+      background: url("assets/hero-campo.jpg") center 42% / cover no-repeat;
+      transform: scale(1.03);
+    }
+    .hero::after {
+      content: ""; position: absolute; inset: 0; z-index: 1;
       background:
-        radial-gradient(1200px 600px at 78% -10%, rgba(127,185,223,.30), transparent 60%),
-        radial-gradient(900px 500px at 0% 110%, rgba(139,165,40,.22), transparent 55%),
-        linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 100%);
+        linear-gradient(102deg, rgba(11,38,56,.95) 0%, rgba(12,44,65,.82) 40%, rgba(18,58,84,.48) 68%, rgba(18,58,84,.22) 100%),
+        linear-gradient(0deg, rgba(11,38,56,.75) 0%, rgba(11,38,56,.15) 45%, transparent 70%);
     }
     .hero__grid {
+      position: relative; z-index: 2;
       display: grid; grid-template-columns: 1.15fr .85fr; gap: 3rem; align-items: center;
       padding: 5.5rem 0 5rem;
     }
