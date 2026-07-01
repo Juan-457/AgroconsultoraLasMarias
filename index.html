@@ -218,12 +218,13 @@
     .cta-band p { color: rgba(255,255,255,.82); max-width: 36rem; margin: 1rem auto 2rem; font-size: 1.08rem; }
 
     /* Footer */
-    footer { background: var(--navy-deep); color: rgba(255,255,255,.7); padding: 3rem 0 2rem; }
-    .foot { display: flex; justify-content: space-between; align-items: center; gap: 2rem; flex-wrap: wrap; }
-    .foot img { height: 40px; }
-    .foot__meta { font-size: .88rem; text-align: right; }
+    footer { background: var(--navy-deep); color: rgba(255,255,255,.72); padding: 3.5rem 0 2.5rem; }
+    .foot { display: flex; flex-direction: column; align-items: center; text-align: center; gap: .35rem; }
+    .foot__logo { width: 70px; height: 70px; margin-bottom: .5rem; }
+    .foot__name { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 600; color: #fff; }
+    .foot__tag { font-size: .78rem; letter-spacing: .2em; text-transform: uppercase; color: var(--sky); }
+    .foot__meta { font-size: .85rem; margin-top: .7rem; }
     .foot a { color: var(--sky); }
-    @media (max-width: 640px) { .foot, .foot__meta { text-align: center; justify-content: center; } }
 
     /* Floating WhatsApp bubble */
     .wa-float {
@@ -431,11 +432,10 @@
   <!-- FOOTER -->
   <footer>
     <div class="wrap foot">
-      <img src="assets/logo-horizontal.jpeg" alt="Agroconsultora Las Marías" style="filter:brightness(0) invert(1);opacity:.9" />
-      <div class="foot__meta">
-        <div>Agroconsultora Las Marías · Innovación Agropecuaria</div>
-        <div>© <span id="year"></span> · Consultoría agropecuaria · <a data-wa href="#">WhatsApp</a></div>
-      </div>
+      <img src="assets/logo-sello.png" alt="Agroconsultora Las Marías" class="foot__logo" />
+      <div class="foot__name">Agroconsultora Las Marías</div>
+      <div class="foot__tag">Innovación Agropecuaria</div>
+      <div class="foot__meta">© <span id="year"></span> · Consultoría agropecuaria · <a data-wa href="#">WhatsApp</a></div>
     </div>
   </footer>
 
