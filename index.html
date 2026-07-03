@@ -251,6 +251,39 @@
     .member a.li:hover { background: #004182; transform: translateY(-1px); }
     @media (max-width: 820px) { .team { grid-template-columns: 1fr; max-width: 420px; margin-inline: auto; } }
 
+    /* Filosofía */
+    .filo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+    .filo-step {
+      background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 2.2rem 2rem; transition: .25s ease;
+    }
+    .filo-step:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: transparent; }
+    .filo-step .num {
+      font-family: 'Fraunces', serif; font-size: 2.2rem; font-weight: 600;
+      color: var(--olive-dark); line-height: 1; display: block; margin-bottom: .8rem;
+    }
+    .filo-step h3 { font-size: 1.3rem; margin-bottom: .55rem; }
+    .filo-step p { color: var(--muted); font-size: .98rem; }
+    .filo-note {
+      margin-top: 2.2rem; text-align: center; color: var(--muted);
+      max-width: 46rem; margin-inline: auto; font-size: 1.02rem;
+    }
+    @media (max-width: 760px) { .filo-grid { grid-template-columns: 1fr; } }
+
+    /* Propósito */
+    .proposito {
+      background:
+        radial-gradient(700px 400px at 15% 100%, rgba(139,165,40,.22), transparent 60%),
+        linear-gradient(150deg, var(--navy), var(--navy-deep));
+      color: #fff; padding: 4.5rem 0; text-align: center;
+    }
+    .proposito .eyebrow { color: var(--sky); justify-content: center; }
+    .proposito blockquote {
+      font-family: 'Fraunces', serif; font-style: italic; font-weight: 500;
+      font-size: clamp(1.3rem, 2.6vw, 1.9rem); line-height: 1.45;
+      max-width: 52rem; margin: 1.2rem auto 0; color: rgba(255,255,255,.94);
+    }
+
     /* CTA band */
     .cta-band {
       background:
@@ -304,7 +337,7 @@
       <div class="reveal in">
         <span class="eyebrow">Visión 360° · Agricultura · Ganadería · Gestión</span>
         <h1>Consultoría agronómica <em>especializada</em></h1>
-        <p class="lead">Impulsamos organizaciones agropecuarias más rentables, eficientes y sostenibles, integrando la producción agrícola y ganadera con la gestión técnica, económica y tecnológica.</p>
+        <p class="lead">Impulsamos organizaciones agropecuarias más rentables, eficientes y sostenibles mediante una Visión 360°, integrando la producción agrícola y ganadera con la gestión técnica, económica, financiera, tecnológica y organizacional.</p>
         <div class="hero__cta">
           <a class="btn btn-wa" data-wa href="#">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -342,66 +375,84 @@
       <div class="section-head center reveal">
         <span class="eyebrow">Nuestras soluciones estratégicas</span>
         <h2>Transformamos información en decisiones y decisiones en resultados</h2>
-        <p>No brindamos servicios aislados: acompañamos a cada organización en la planificación, ejecución y mejora continua de sus sistemas productivos.</p>
+        <p>El éxito de una empresa agropecuaria no depende únicamente de producir más, sino de gestionar integralmente todos los factores que generan valor. Acompañamos a cada organización en la planificación, ejecución y mejora continua de sus sistemas productivos.</p>
       </div>
       <div class="cards">
         <div class="card reveal">
           <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v16"/></svg></div>
           <h3>Dirección integral de producción</h3>
-          <p>Planificamos, dirigimos y controlamos el sistema productivo, alineando estrategia, agronomía y gestión en cada campaña.</p>
+          <p>Planificamos, dirigimos y controlamos integralmente el sistema productivo, alineando la estrategia, la agronomía y la gestión para maximizar el desempeño técnico, operativo y económico de cada campaña.</p>
           <ul>
             <li>Mayor rentabilidad por hectárea</li>
             <li>Mayor previsibilidad del negocio</li>
             <li>Reducción de riesgos productivos</li>
+            <li>Mejor utilización de los recursos</li>
+            <li>Información confiable para la toma de decisiones</li>
+            <li>Producción alineada con los objetivos estratégicos</li>
           </ul>
         </div>
         <div class="card reveal">
           <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l3-4 3 3 4-6"/></svg></div>
           <h3>Tecnología e inteligencia agrícola</h3>
-          <p>Agricultura de precisión, analítica de datos y herramientas digitales que convierten la información del campo en decisiones inteligentes.</p>
+          <p>Integramos tecnologías de agricultura de precisión, analítica de datos y herramientas digitales que transforman la información del campo en decisiones inteligentes para optimizar cada proceso productivo.</p>
           <ul>
             <li>Decisiones basadas en datos confiables</li>
             <li>Optimización del uso de insumos</li>
+            <li>Reducción de costos operativos</li>
+            <li>Mayor precisión en las intervenciones</li>
             <li>Trazabilidad integral de la producción</li>
+            <li>Incremento de la eficiencia y productividad</li>
           </ul>
         </div>
         <div class="card reveal">
           <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22V8M12 8c0-3 2-5 5-5-1 3-3 5-5 5zM12 12c0-3-2-5-5-5 1 3 3 5 5 5z"/></svg></div>
           <h3>Ingeniería agronómica</h3>
-          <p>Estrategias agronómicas integrales: manejo eficiente del suelo, el agua y la nutrición con prácticas sostenibles.</p>
+          <p>Desarrollamos estrategias agronómicas integrales para maximizar el potencial productivo mediante el manejo eficiente del suelo, el agua, la nutrición y la implementación de prácticas agrícolas sostenibles.</p>
           <ul>
             <li>Mayor potencial de rendimiento</li>
-            <li>Conservación y salud del suelo</li>
+            <li>Uso eficiente de agua, fertilizantes e insumos</li>
+            <li>Conservación y mejora de la salud del suelo</li>
             <li>Sistemas productivos más resilientes</li>
+            <li>Producción sostenible en el largo plazo</li>
+            <li>Mayor estabilidad productiva</li>
           </ul>
         </div>
         <div class="card reveal">
           <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5c0-1 1-1.7 2.5-1.7s2.5.7 2.5 1.7c0 2.5-5 1.5-5 4 0 1 1 1.7 2.5 1.7s2.5-.7 2.5-1.7"/></svg></div>
           <h3>Estrategia económica y financiera</h3>
-          <p>Convertimos la información técnica en decisiones económicas que fortalecen la rentabilidad y reducen la incertidumbre.</p>
+          <p>Transformamos la información técnica y productiva en decisiones económicas y financieras que fortalecen la rentabilidad, optimizan las inversiones y reducen la incertidumbre del negocio.</p>
           <ul>
             <li>Mayor retorno sobre la inversión</li>
-            <li>Optimización de costos y recursos</li>
+            <li>Optimización de costos y recursos financieros</li>
+            <li>Reducción del riesgo económico</li>
             <li>Mejor planificación y control financiero</li>
+            <li>Inversiones respaldadas por análisis técnico</li>
+            <li>Mayor competitividad empresarial</li>
           </ul>
         </div>
         <div class="card reveal">
           <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></div>
           <h3>Excelencia operacional</h3>
-          <p>Optimizamos procesos, operaciones y maquinaria para una ejecución consistente en cada etapa del sistema productivo.</p>
+          <p>Optimizamos procesos, operaciones y maquinaria para alcanzar los más altos estándares de eficiencia, calidad y productividad, asegurando una ejecución consistente en cada etapa del sistema productivo.</p>
           <ul>
             <li>Reducción de pérdidas operativas</li>
             <li>Mayor eficiencia de la maquinaria</li>
+            <li>Disminución de costos de operación</li>
             <li>Procesos estandarizados y controlados</li>
+            <li>Mejor aprovechamiento de los recursos disponibles</li>
+            <li>Incremento de la productividad operacional</li>
           </ul>
         </div>
         <div class="card reveal">
           <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.5 3-5.5 6.5-5.5s6.5 2 6.5 5.5"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16.5 14.6c2.8.3 5 2 5 4.9"/></svg></div>
           <h3>Capital humano y desarrollo organizacional</h3>
-          <p>Fortalecemos las capacidades técnicas, de liderazgo y de gestión para desarrollar organizaciones de alto desempeño.</p>
+          <p>Fortalecemos las capacidades técnicas, de liderazgo y de gestión de las personas para desarrollar organizaciones de alto desempeño, preparadas para afrontar los desafíos del agro moderno.</p>
           <ul>
-            <li>Equipos comprometidos y alineados</li>
+            <li>Equipos altamente comprometidos y alineados</li>
+            <li>Liderazgo sólido y efectivo</li>
             <li>Mayor adopción de nuevas tecnologías</li>
+            <li>Mejor coordinación entre personas y procesos</li>
+            <li>Incremento de la productividad organizacional</li>
             <li>Cultura de mejora continua e innovación</li>
           </ul>
         </div>
@@ -421,24 +472,44 @@
             <ul class="checklist">
               <li>
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8BA528" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg>
-                <span><b>Visión 360°.</b> Agricultura, ganadería y gestión integradas como un único sistema que genera valor.</span>
+                <span><b>Integración inteligente.</b> De todas las variables que intervienen en el negocio agropecuario.</span>
               </li>
               <li>
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8BA528" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg>
-                <span><b>Soluciones estratégicas, no servicios aislados.</b> Nos involucramos con cada cliente para transformar desafíos en oportunidades.</span>
+                <span><b>Visión 360°.</b> Conecta Agricultura, Ganadería y Gestión para desarrollar organizaciones más competitivas, resilientes y preparadas para los desafíos del futuro.</span>
               </li>
               <li>
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8BA528" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg>
-                <span><b>Información en decisiones, decisiones en resultados.</b> Impacto concreto, medible y orientado a la rentabilidad.</span>
-              </li>
-              <li>
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8BA528" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg>
-                <span><b>Preparados para el futuro.</b> Organizaciones más competitivas, resilientes y sostenibles en el largo plazo.</span>
+                <span><b>Soluciones estratégicas, no servicios aislados.</b> Transforman información en decisiones, decisiones en resultados y resultados en valor para nuestros clientes.</span>
               </li>
             </ul>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- FILOSOFÍA -->
+  <section class="pad" id="filosofia" style="padding-top:1rem">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Nuestra filosofía</span>
+        <h2>Resultados concretos, no un catálogo de servicios</h2>
+        <p>Nuestra metodología sigue una lógica simple y poderosa, inspirada en las principales consultoras estratégicas del mundo.</p>
+      </div>
+      <div class="filo-grid">
+        <div class="filo-step reveal">
+          <span class="num">1</span>
+          <h3>Nuestro valor aportado</h3>
+          <p>Explicamos cómo integramos conocimiento, experiencia, tecnología y gestión para crear valor en cada organización.</p>
+        </div>
+        <div class="filo-step reveal">
+          <span class="num">2</span>
+          <h3>Resultados para su organización</h3>
+          <p>Demostramos el impacto esperado de nuestras soluciones mediante resultados concretos, medibles y orientados a la rentabilidad, la eficiencia y la sostenibilidad del negocio.</p>
+        </div>
+      </div>
+      <p class="filo-note reveal">En Las Marías no comercializamos servicios aislados: nos involucramos estratégicamente con cada cliente para transformar desafíos en oportunidades, información en decisiones y decisiones en resultados que generan valor para las organizaciones productivas.</p>
     </div>
   </section>
 
@@ -484,6 +555,14 @@
           </a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- PROPÓSITO -->
+  <section class="proposito">
+    <div class="wrap reveal">
+      <span class="eyebrow">Nuestro propósito</span>
+      <blockquote>“Contribuir al desarrollo de organizaciones agropecuarias de alto desempeño mediante una Visión 360°, integrando agricultura, ganadería y gestión para generar valor sostenible, mejorar la competitividad y construir el futuro del agro.”</blockquote>
     </div>
   </section>
 
