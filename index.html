@@ -11,9 +11,10 @@
   <meta property="og:title" content="Agroconsultora Las Marías · Innovación Agropecuaria" />
   <meta property="og:description" content="Consultoría agropecuaria premium: innovación, datos y experiencia de campo para producir mejor." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/logo-sello.jpeg" />
+  <meta property="og:image" content="assets/Las Marias 9.webp" />
 
   <link rel="icon" type="image/jpeg" href="assets/logo-sello.jpeg" />
+  <link rel="preload" as="image" href="assets/Las Marias 9.webp" fetchpriority="high" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -70,60 +71,75 @@
     .btn-navy { background: var(--navy); color: #fff; }
     .btn-navy:hover { background: var(--navy-deep); transform: translateY(-2px); }
 
-    /* ---------- Header ---------- */
+    /* ---------- Header (transparente sobre el hero, sólido al scrollear) ---------- */
     header {
-      position: sticky; top: 0; z-index: 50;
-      background: rgba(255,255,255,.86); backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--line);
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      background: transparent; border-bottom: 1px solid transparent;
+      transition: background .25s ease, border-color .25s ease, box-shadow .25s ease;
+    }
+    header.scrolled {
+      background: rgba(13,44,65,.92); backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      box-shadow: 0 10px 30px -18px rgba(0,0,0,.5);
     }
     .nav { display: flex; align-items: center; justify-content: space-between; padding: .7rem 0; }
-    .nav__logo img { height: 46px; width: auto; }
+    .nav__logo { display: inline-flex; align-items: center; gap: .7rem; }
+    .nav__logo img { height: 48px; width: auto; }
+    .nav__logo .brand {
+      font-family: 'Fraunces', serif; font-weight: 600; color: #fff;
+      font-size: 1.08rem; line-height: 1.15; letter-spacing: .01em;
+    }
+    .nav__logo .brand small {
+      display: block; font-family: 'Inter', sans-serif; font-weight: 600;
+      font-size: .6rem; letter-spacing: .22em; text-transform: uppercase; color: var(--sky);
+    }
     .nav__links { display: flex; align-items: center; gap: 2rem; }
-    .nav__links a { font-weight: 500; font-size: .95rem; color: var(--navy); }
-    .nav__links a:hover { color: var(--olive-dark); }
+    .nav__links a { font-weight: 500; font-size: .95rem; color: #fff; text-shadow: 0 1px 8px rgba(0,0,0,.25); }
+    .nav__links a:hover { color: var(--wheat); }
     .nav__cta { display: inline-flex; }
     @media (max-width: 860px) { .nav__links { display: none; } }
 
-    /* ---------- Hero ---------- */
+    /* ---------- Hero (pantalla completa, estilo institucional) ---------- */
     .hero {
       position: relative; color: #fff; overflow: hidden;
       background-color: var(--navy-deep);
+      min-height: 100svh;
+      display: flex; align-items: center;
     }
     .hero::before {
       content: ""; position: absolute; inset: 0; z-index: 0;
-      background: url("assets/hero-campo.jpg") center 42% / cover no-repeat;
-      transform: scale(1.03);
+      background: url("assets/Las Marias 9.webp") center 55% / cover no-repeat;
     }
     .hero::after {
       content: ""; position: absolute; inset: 0; z-index: 1;
       background:
-        linear-gradient(102deg, rgba(11,38,56,.95) 0%, rgba(12,44,65,.82) 40%, rgba(18,58,84,.48) 68%, rgba(18,58,84,.22) 100%),
-        linear-gradient(0deg, rgba(11,38,56,.75) 0%, rgba(11,38,56,.15) 45%, transparent 70%);
+        linear-gradient(98deg, rgba(11,38,56,.88) 0%, rgba(12,44,65,.62) 42%, rgba(18,58,84,.28) 70%, rgba(18,58,84,.12) 100%),
+        linear-gradient(0deg, rgba(11,38,56,.72) 0%, rgba(11,38,56,.18) 38%, transparent 62%),
+        linear-gradient(180deg, rgba(11,38,56,.55) 0%, transparent 24%);
     }
-    .hero__grid {
-      position: relative; z-index: 2;
-      display: grid; grid-template-columns: 1.15fr .85fr; gap: 3rem; align-items: center;
-      padding: 5.5rem 0 5rem;
+    .hero__content {
+      position: relative; z-index: 2; width: 100%;
+      padding: 8.5rem 0 6.5rem;
     }
-    .hero h1 { font-size: clamp(2.4rem, 5.2vw, 4rem); color: #fff; letter-spacing: -.5px; }
+    .hero h1 { font-size: clamp(2.7rem, 6vw, 4.5rem); color: #fff; letter-spacing: -.5px; max-width: 22ch; }
     .hero h1 em { font-style: italic; color: var(--sky); }
-    .hero p.lead { margin: 1.4rem 0 2.2rem; font-size: 1.12rem; color: rgba(255,255,255,.82); max-width: 34rem; }
+    .hero p.lead { margin: 1.5rem 0 2.4rem; font-size: clamp(1.05rem, 1.6vw, 1.25rem); color: rgba(255,255,255,.88); max-width: 36rem; }
     .hero .eyebrow { color: var(--sky); }
     .hero .eyebrow::before { background: var(--wheat); }
     .hero__cta { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .hero__art { display: flex; justify-content: center; }
-    .hero__art .badge-ring {
-      width: min(400px, 78vw); aspect-ratio: 1;
-      display: grid; place-items: center;
-      animation: floaty 6s ease-in-out infinite;
+    .hero__scroll {
+      position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%); z-index: 2;
+      display: grid; place-items: center; width: 44px; height: 44px;
+      border-radius: 50%; border: 1.5px solid rgba(255,255,255,.45); color: #fff;
+      animation: nudge 2.4s ease-in-out infinite;
     }
-    .hero__art img { filter: drop-shadow(0 22px 46px rgba(0,0,0,.5)); }
-    @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+    .hero__scroll:hover { border-color: #fff; background: rgba(255,255,255,.1); }
+    @keyframes nudge { 0%,100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 8px); } }
     @media (max-width: 860px) {
-      .hero__grid { grid-template-columns: 1fr; padding: 3.5rem 0; gap: 2.5rem; text-align: center; }
+      .hero__content { padding: 7.5rem 0 6rem; text-align: center; }
+      .hero h1 { margin-inline: auto; }
       .hero .eyebrow, .hero__cta { justify-content: center; }
       .hero p.lead { margin-inline: auto; }
-      .hero__art { order: -1; }
     }
 
     /* ---------- Pilares strip ---------- */
@@ -166,12 +182,9 @@
     .enfoque { background: var(--navy); color: #fff; border-radius: 28px; overflow: hidden; }
     .enfoque__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
     .enfoque__art {
-      background:
-        radial-gradient(600px 400px at 30% 20%, rgba(127,185,223,.35), transparent 60%),
-        linear-gradient(160deg, #17465f, var(--navy-deep));
-      display: grid; place-items: center; padding: 3rem; min-height: 100%;
+      background: url("assets/Las Marias 11.webp") center / cover no-repeat;
+      min-height: 100%;
     }
-    .enfoque__art img { width: min(280px, 62%); filter: drop-shadow(0 24px 50px rgba(0,0,0,.45)); }
     .enfoque__body { padding: 3.4rem; }
     .enfoque__body h2 { color: #fff; font-size: clamp(1.8rem, 3.4vw, 2.5rem); }
     .enfoque__body .eyebrow { color: var(--sky); }
@@ -248,7 +261,8 @@
   <header>
     <div class="wrap nav">
       <a class="nav__logo" href="#top" aria-label="Agroconsultora Las Marías">
-        <img src="assets/logo-horizontal.jpeg" alt="Agroconsultora Las Marías" />
+        <img src="assets/logo-sello.png" alt="Agroconsultora Las Marías" />
+        <span class="brand">Las Marías<small>Innovación Agropecuaria</small></span>
       </a>
       <nav class="nav__links">
         <a href="#servicios">Servicios</a>
@@ -256,13 +270,13 @@
         <a href="#equipo">Equipo</a>
         <a href="#contacto">Contacto</a>
       </nav>
-      <a class="btn btn-navy nav__cta" data-wa href="#">Hablemos</a>
+      <a class="btn btn-ghost nav__cta" data-wa href="#">Hablemos</a>
     </div>
   </header>
 
   <!-- HERO -->
   <section class="hero" id="top">
-    <div class="wrap hero__grid">
+    <div class="wrap hero__content">
       <div class="reveal in">
         <span class="eyebrow">Innovación Agropecuaria</span>
         <h1>Consultoría <em>premium</em> para empresas del agro</h1>
@@ -275,12 +289,10 @@
           <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
         </div>
       </div>
-      <div class="hero__art reveal in">
-        <div class="badge-ring">
-          <img src="assets/logo-sello.png" alt="Sello Agroconsultora Las Marías" />
-        </div>
-      </div>
     </div>
+    <a class="hero__scroll" href="#servicios" aria-label="Bajar a servicios">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </a>
   </section>
 
   <!-- PILARES -->
@@ -341,9 +353,7 @@
     <div class="wrap">
       <div class="enfoque reveal">
         <div class="enfoque__grid">
-          <div class="enfoque__art">
-            <img src="assets/logo-sello.png" alt="Agroconsultora Las Marías" />
-          </div>
+          <div class="enfoque__art" role="img" aria-label="Cultivo en surcos — trabajo a campo"></div>
           <div class="enfoque__body">
             <span class="eyebrow">Nuestro enfoque</span>
             <h2>Cerca del productor, en cada decisión</h2>
@@ -458,6 +468,12 @@
 
     // Año dinámico
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Header transparente sobre el hero, sólido al scrollear
+    const headerEl = document.querySelector("header");
+    const onScroll = () => headerEl.classList.toggle("scrolled", window.scrollY > 40);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
 
     // Reveal on scroll
     const io = new IntersectionObserver((entries) => {
