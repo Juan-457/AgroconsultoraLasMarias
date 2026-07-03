@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Agroconsultora Las Marías · Innovación Agropecuaria</title>
-  <meta name="description" content="Agroconsultora Las Marías — consultoría agropecuaria premium. Acompañamos empresas del agro con innovación, datos y experiencia de campo para producir mejor." />
+  <title>Agroconsultora Las Marías · Visión 360°</title>
+  <meta name="description" content="Agroconsultora Las Marías — consultoría agronómica especializada con Visión 360°: agricultura, ganadería y gestión integradas para organizaciones más rentables, eficientes y sostenibles." />
   <meta name="theme-color" content="#123A54" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Agroconsultora Las Marías · Innovación Agropecuaria" />
-  <meta property="og:description" content="Consultoría agropecuaria premium: innovación, datos y experiencia de campo para producir mejor." />
+  <meta property="og:title" content="Agroconsultora Las Marías · Visión 360°" />
+  <meta property="og:description" content="Consultoría agronómica especializada: agricultura, ganadería y gestión integradas para transformar información en decisiones y decisiones en resultados." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/Las Marias 9.webp" />
 
-  <link rel="icon" type="image/jpeg" href="assets/logo-sello.jpeg" />
+  <link rel="icon" type="image/png" href="assets/logo-sello.png" />
   <link rel="preload" as="image" href="assets/Las Marias 9.webp" fetchpriority="high" />
 
   <!-- Fonts -->
@@ -175,6 +175,15 @@
     .card:nth-child(6) .ic { background: linear-gradient(140deg, var(--olive-dark), var(--navy)); }
     .card h3 { font-size: 1.22rem; margin-bottom: .5rem; }
     .card p { color: var(--muted); font-size: .96rem; }
+    .card ul { list-style: none; margin-top: .9rem; display: grid; gap: .45rem; }
+    .card ul li {
+      position: relative; padding-left: 1.35rem;
+      color: var(--ink); font-size: .9rem; font-weight: 500;
+    }
+    .card ul li::before {
+      content: "✓"; position: absolute; left: 0; top: 0;
+      color: var(--olive-dark); font-weight: 700;
+    }
     @media (max-width: 900px) { .cards { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 600px) { .cards { grid-template-columns: 1fr; } }
 
@@ -270,7 +279,7 @@
         <a href="#equipo">Equipo</a>
         <a href="#contacto">Contacto</a>
       </nav>
-      <a class="btn btn-ghost nav__cta" data-wa href="#">Hablemos</a>
+      <a class="btn btn-ghost nav__cta" data-wa href="#">Contacto</a>
     </div>
   </header>
 
@@ -278,9 +287,9 @@
   <section class="hero" id="top">
     <div class="wrap hero__content">
       <div class="reveal in">
-        <span class="eyebrow">Innovación Agropecuaria</span>
-        <h1>Consultoría <em>premium</em> para empresas del agro</h1>
-        <p class="lead">Combinamos experiencia de campo, datos y tecnología para que cada decisión productiva sea más rentable, sustentable y previsible.</p>
+        <span class="eyebrow">Visión 360° · Agricultura · Ganadería · Gestión</span>
+        <h1>Consultoría agronómica <em>especializada</em></h1>
+        <p class="lead">Impulsamos organizaciones agropecuarias más rentables, eficientes y sostenibles, integrando la producción agrícola y ganadera con la gestión técnica, económica y tecnológica.</p>
         <div class="hero__cta">
           <a class="btn btn-wa" data-wa href="#">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -299,7 +308,7 @@
   <div class="pillars">
     <div class="wrap pillars__grid">
       <div class="pillar"><b>Agro</b><span>especialistas del sector agropecuario</span></div>
-      <div class="pillar"><b>360°</b><span>agricultura y ganadería</span></div>
+      <div class="pillar"><b>360°</b><span>agricultura, ganadería y gestión</span></div>
       <div class="pillar"><b>Datos</b><span>decisiones basadas en información</span></div>
       <div class="pillar"><b>1:1</b><span>acompañamiento personalizado</span></div>
     </div>
@@ -309,40 +318,70 @@
   <section class="pad" id="servicios">
     <div class="wrap">
       <div class="section-head center reveal">
-        <span class="eyebrow">Qué hacemos</span>
-        <h2>Soluciones integrales para tu empresa agropecuaria</h2>
-        <p>Un mismo equipo que entiende el negocio de punta a punta: del lote a la gestión, del suelo a la rentabilidad.</p>
+        <span class="eyebrow">Nuestras soluciones estratégicas</span>
+        <h2>Transformamos información en decisiones y decisiones en resultados</h2>
+        <p>No brindamos servicios aislados: acompañamos a cada organización en la planificación, ejecución y mejora continua de sus sistemas productivos.</p>
       </div>
       <div class="cards">
         <div class="card reveal">
-          <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20M4.5 4.5l15 15M19.5 4.5l-15 15"/></svg></div>
-          <h3>Agricultura de precisión</h3>
-          <p>Ambientación de lotes, mapas de rendimiento y prescripciones variables para sembrar y fertilizar donde más rinde.</p>
-        </div>
-        <div class="card reveal">
-          <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21c4-2 6-5 6-9M9 12c3 0 5-2 6-5M15 7c2 0 4-1 5-3"/><circle cx="18" cy="16" r="3"/></svg></div>
-          <h3>Manejo ganadero</h3>
-          <p>Planes de nutrición, sanidad y recría para mejorar índices productivos y la eficiencia de conversión del rodeo.</p>
-        </div>
-        <div class="card reveal">
-          <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22V8M12 8c0-3 2-5 5-5-1 3-3 5-5 5zM12 12c0-3-2-5-5-5 1 3 3 5 5 5z"/></svg></div>
-          <h3>Nutrición y suelos</h3>
-          <p>Diagnóstico de fertilidad, análisis de suelo y estrategias de nutrición para cuidar el capital productivo a largo plazo.</p>
-        </div>
-        <div class="card reveal">
           <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v16"/></svg></div>
-          <h3>Planificación productiva</h3>
-          <p>Rotaciones, planteos técnicos y presupuestos de campaña que ordenan la producción y anticipan resultados.</p>
+          <h3>Dirección integral de producción</h3>
+          <p>Planificamos, dirigimos y controlamos el sistema productivo, alineando estrategia, agronomía y gestión en cada campaña.</p>
+          <ul>
+            <li>Mayor rentabilidad por hectárea</li>
+            <li>Mayor previsibilidad del negocio</li>
+            <li>Reducción de riesgos productivos</li>
+          </ul>
         </div>
         <div class="card reveal">
           <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l3-4 3 3 4-6"/></svg></div>
-          <h3>Gestión y datos</h3>
-          <p>Indicadores, tableros y seguimiento de costos para tomar decisiones con números claros en cada etapa.</p>
+          <h3>Tecnología e inteligencia agrícola</h3>
+          <p>Agricultura de precisión, analítica de datos y herramientas digitales que convierten la información del campo en decisiones inteligentes.</p>
+          <ul>
+            <li>Decisiones basadas en datos confiables</li>
+            <li>Optimización del uso de insumos</li>
+            <li>Trazabilidad integral de la producción</li>
+          </ul>
         </div>
         <div class="card reveal">
-          <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3c-4 4-6 7-6 10a6 6 0 0 0 12 0c0-3-2-6-6-10z"/></svg></div>
-          <h3>Sustentabilidad</h3>
-          <p>Prácticas que cuidan el ambiente y suman valor: manejo responsable de insumos, agua y biodiversidad del campo.</p>
+          <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22V8M12 8c0-3 2-5 5-5-1 3-3 5-5 5zM12 12c0-3-2-5-5-5 1 3 3 5 5 5z"/></svg></div>
+          <h3>Ingeniería agronómica</h3>
+          <p>Estrategias agronómicas integrales: manejo eficiente del suelo, el agua y la nutrición con prácticas sostenibles.</p>
+          <ul>
+            <li>Mayor potencial de rendimiento</li>
+            <li>Conservación y salud del suelo</li>
+            <li>Sistemas productivos más resilientes</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5c0-1 1-1.7 2.5-1.7s2.5.7 2.5 1.7c0 2.5-5 1.5-5 4 0 1 1 1.7 2.5 1.7s2.5-.7 2.5-1.7"/></svg></div>
+          <h3>Estrategia económica y financiera</h3>
+          <p>Convertimos la información técnica en decisiones económicas que fortalecen la rentabilidad y reducen la incertidumbre.</p>
+          <ul>
+            <li>Mayor retorno sobre la inversión</li>
+            <li>Optimización de costos y recursos</li>
+            <li>Mejor planificación y control financiero</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></div>
+          <h3>Excelencia operacional</h3>
+          <p>Optimizamos procesos, operaciones y maquinaria para una ejecución consistente en cada etapa del sistema productivo.</p>
+          <ul>
+            <li>Reducción de pérdidas operativas</li>
+            <li>Mayor eficiencia de la maquinaria</li>
+            <li>Procesos estandarizados y controlados</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.5 3-5.5 6.5-5.5s6.5 2 6.5 5.5"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16.5 14.6c2.8.3 5 2 5 4.9"/></svg></div>
+          <h3>Capital humano y desarrollo organizacional</h3>
+          <p>Fortalecemos las capacidades técnicas, de liderazgo y de gestión para desarrollar organizaciones de alto desempeño.</p>
+          <ul>
+            <li>Equipos comprometidos y alineados</li>
+            <li>Mayor adopción de nuevas tecnologías</li>
+            <li>Cultura de mejora continua e innovación</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -355,24 +394,24 @@
         <div class="enfoque__grid">
           <div class="enfoque__art" role="img" aria-label="Cultivo en surcos — trabajo a campo"></div>
           <div class="enfoque__body">
-            <span class="eyebrow">Nuestro enfoque</span>
-            <h2>Cerca del productor, en cada decisión</h2>
+            <span class="eyebrow">¿Por qué Las Marías?</span>
+            <h2>La rentabilidad sostenible no depende de una única decisión</h2>
             <ul class="checklist">
               <li>
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8BA528" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg>
-                <span><b>Mirada integral.</b> Vemos el campo como un sistema: agronomía, ganadería, gestión y personas trabajando juntas.</span>
+                <span><b>Visión 360°.</b> Agricultura, ganadería y gestión integradas como un único sistema que genera valor.</span>
               </li>
               <li>
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8BA528" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg>
-                <span><b>Decisiones con datos.</b> Traducimos información y tecnología en recomendaciones concretas y accionables.</span>
+                <span><b>Soluciones estratégicas, no servicios aislados.</b> Nos involucramos con cada cliente para transformar desafíos en oportunidades.</span>
               </li>
               <li>
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8BA528" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg>
-                <span><b>Acompañamiento real.</b> Estamos en el campo, no solo en el informe. Seguimiento cercano en toda la campaña.</span>
+                <span><b>Información en decisiones, decisiones en resultados.</b> Impacto concreto, medible y orientado a la rentabilidad.</span>
               </li>
               <li>
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8BA528" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg>
-                <span><b>Resultados sustentables.</b> Buscamos rentabilidad hoy sin comprometer el capital productivo del mañana.</span>
+                <span><b>Preparados para el futuro.</b> Organizaciones más competitivas, resilientes y sostenibles en el largo plazo.</span>
               </li>
             </ul>
           </div>
@@ -403,8 +442,8 @@
         <div class="member reveal">
           <div class="avatar">PF</div>
           <h3>Pablo Ferrari</h3>
-          <div class="role">Ing. Agrónomo · MBA en Agronegocios</div>
-          <p>Consultor privado desde 2012 y regente técnico en la Cooperativa Agrícola Conesa. Ingeniero Agrónomo (UNR) y MBA en Agronegocios (Universidad Austral), con base en San Nicolás.</p>
+          <div class="role">Ing. Agrónomo · Magíster en Agronegocios</div>
+          <p>Consultoría agropecuaria, regencia técnica y ensayos a campo. Especializado en seguimiento y gestión de cultivos, agricultura digital y de precisión, ambientación, conservación de suelos y uso eficiente de recursos. 20 años acompañando sistemas agropecuarios sustentables. Miembro de AAPPCE y AIANBA. UNR · Universidad Austral. Base en San Nicolás, Buenos Aires.</p>
           <a class="li" href="https://www.linkedin.com/in/pablo-ferrari-6133b9163/" target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.76-2.05C21.4 8.65 22 11 22 14.1V21h-4v-6.1c0-1.45-.03-3.3-2-3.3s-2.3 1.57-2.3 3.2V21h-4z"/></svg>
             LinkedIn
