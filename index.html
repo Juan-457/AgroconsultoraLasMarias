@@ -93,11 +93,35 @@
       display: block; font-family: 'Inter', sans-serif; font-weight: 600;
       font-size: .6rem; letter-spacing: .22em; text-transform: uppercase; color: var(--sky);
     }
-    .nav__links { display: flex; align-items: center; gap: 2rem; }
-    .nav__links a { font-weight: 500; font-size: .95rem; color: #fff; text-shadow: 0 1px 8px rgba(0,0,0,.25); }
-    .nav__links a:hover { color: var(--wheat); }
     .nav__cta { display: inline-flex; }
-    @media (max-width: 860px) { .nav__links { display: none; } }
+
+    /* Nav lateral (links verticales al costado derecho del hero) */
+    .side-nav {
+      position: absolute; right: clamp(1.5rem, 4vw, 4rem); top: 50%;
+      transform: translateY(-50%); z-index: 3;
+      display: grid; gap: 1.15rem; text-align: right;
+    }
+    .side-nav a {
+      display: inline-flex; align-items: center; justify-content: flex-end; gap: .7rem;
+      color: #fff; font-weight: 600; font-size: 1.05rem;
+      text-shadow: 0 1px 10px rgba(0,0,0,.35);
+      opacity: 0; transform: translateX(24px);
+      animation: side-in .6s cubic-bezier(.2,.7,.2,1) forwards;
+      transition: color .2s ease;
+    }
+    .side-nav a::after {
+      content: ""; width: 0; height: 2px; background: var(--wheat);
+      transition: width .25s ease; order: 2;
+    }
+    .side-nav a:hover { color: var(--wheat); }
+    .side-nav a:hover::after { width: 26px; }
+    .side-nav a:nth-child(1) { animation-delay: .15s; }
+    .side-nav a:nth-child(2) { animation-delay: .3s; }
+    .side-nav a:nth-child(3) { animation-delay: .45s; }
+    .side-nav a:nth-child(4) { animation-delay: .6s; }
+    .side-nav a:nth-child(5) { animation-delay: .75s; }
+    @keyframes side-in { to { opacity: 1; transform: none; } }
+    @media (max-width: 860px) { .side-nav { display: none; } }
 
     /* ---------- Hero (pantalla completa, estilo institucional) ---------- */
     .hero {
@@ -273,12 +297,6 @@
         <img src="assets/logo-sello.png" alt="Agroconsultora Las Marías" />
         <span class="brand">Las Marías<small>Innovación Agropecuaria</small></span>
       </a>
-      <nav class="nav__links">
-        <a href="#servicios">Servicios</a>
-        <a href="#enfoque">Enfoque</a>
-        <a href="#equipo">Equipo</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
       <a class="btn btn-ghost nav__cta" data-wa href="#">Contacto</a>
     </div>
   </header>
@@ -299,6 +317,13 @@
         </div>
       </div>
     </div>
+    <nav class="side-nav" aria-label="Navegación principal">
+      <a href="#top">Inicio</a>
+      <a href="#servicios">Soluciones</a>
+      <a href="#enfoque">¿Por qué Las Marías?</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
     <a class="hero__scroll" href="#servicios" aria-label="Bajar a servicios">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </a>
