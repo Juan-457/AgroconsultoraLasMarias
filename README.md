@@ -13,7 +13,7 @@ El número de la burbuja y de todos los botones está en **un solo lugar**.
 En `index.html`, al final, editá la constante:
 
 ```js
-const WA_NUMBER = "5490000000000"; // formato internacional sin "+", espacios ni guiones
+const WA_NUMBER = "5493413452722"; // +54 9 3413 45-2722, formato internacional sin "+", espacios ni guiones
 ```
 
 Todos los botones y la burbuja flotante se actualizan solos.
