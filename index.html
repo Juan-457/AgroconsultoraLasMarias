@@ -233,12 +233,17 @@
     }
     .member:hover { box-shadow: var(--shadow); transform: translateY(-4px); border-color: transparent; }
     .member .avatar {
-      width: 84px; height: 84px; border-radius: 50%; margin: 0 auto 1.1rem;
-      display: grid; place-items: center; font-family: 'Fraunces', serif; font-size: 1.7rem; color: #fff;
+      width: 112px; height: 112px; border-radius: 50%; margin: 0 auto 1.1rem;
+      padding: 4px; overflow: hidden;
       background: linear-gradient(145deg, var(--navy), var(--olive-dark));
+      box-shadow: 0 12px 28px -16px rgba(18, 58, 84, .65);
     }
     .member:nth-child(2) .avatar { background: linear-gradient(145deg, var(--olive-dark), var(--sky)); }
     .member:nth-child(3) .avatar { background: linear-gradient(145deg, var(--brown), var(--wheat)); }
+    .member .avatar img {
+      width: 100%; height: 100%; object-fit: cover; border-radius: 50%;
+      border: 3px solid #fff;
+    }
     .member h3 { font-size: 1.2rem; }
     .member .role { color: var(--olive-dark); font-weight: 600; font-size: .9rem; margin: .2rem 0 .9rem; }
     .member p { color: var(--muted); font-size: .92rem; }
@@ -521,7 +526,7 @@
       </div>
       <div class="team">
         <div class="member reveal">
-          <div class="avatar">DC</div>
+          <div class="avatar"><img src="assets/DanielCanova.webp" alt="Daniel Canova" loading="lazy" /></div>
           <h3>Daniel Canova</h3>
           <div class="role">Ing. Agrónomo · M.Sc. en Suelos</div>
           <p>Miembro AAPPCE<br />Miembro AAC SUELO<br />Miembro AAPRESID</p>
@@ -532,7 +537,7 @@
           </a>
         </div>
         <div class="member reveal">
-          <div class="avatar">PF</div>
+          <div class="avatar"><img src="assets/PabloFerrari.webp" alt="Pablo Ferrari" loading="lazy" /></div>
           <h3>Pablo Ferrari</h3>
           <div class="role">Ing. Agrónomo · Magíster en Agronegocios</div>
           <p>Miembro AAPPCE<br />Miembro AIANBA</p>
@@ -544,7 +549,7 @@
           </a>
         </div>
         <div class="member reveal">
-          <div class="avatar">AM</div>
+          <div class="avatar"><img src="assets/AlejandroMartinez.webp" alt="Alejandro G. Martínez" loading="lazy" /></div>
           <h3>Alejandro G. Martínez</h3>
           <div class="role">Agricultura de precisión · MBA Agribusiness</div>
           <p>30 años en agricultura de precisión y optimización productiva en toda Latinoamérica. Especialista en rentabilidad por hectárea y decisiones basadas en datos. Hoy Director de Operaciones de VERION Agricultura en Perú.</p>
