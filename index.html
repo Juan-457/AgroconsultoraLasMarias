@@ -116,14 +116,19 @@
     }
     .nav { display: flex; align-items: center; justify-content: space-between; padding: .7rem 0; }
     .nav__logo { display: inline-flex; align-items: center; gap: .7rem; }
-    .nav__logo img { height: 124px; width: auto; }
+    .nav__logo img { height: 186px; width: auto; }
     .nav__logo .brand {
       font-family: 'Fraunces', serif; font-weight: 600; color: #fff;
-      font-size: 1.5rem; line-height: 1.15; letter-spacing: .01em;
+      font-size: 2.25rem; line-height: 1.15; letter-spacing: .01em;
     }
     .nav__logo .brand small {
       display: block; font-family: 'Inter', sans-serif; font-weight: 600;
-      font-size: .78rem; letter-spacing: .22em; text-transform: uppercase; color: var(--sky);
+      font-size: 1.17rem; letter-spacing: .22em; text-transform: uppercase; color: var(--sky);
+    }
+    @media (max-width: 600px) {
+      .nav__logo img { height: 110px; }
+      .nav__logo .brand { font-size: 1.6rem; }
+      .nav__logo .brand small { font-size: .8rem; }
     }
     /* Nav lateral (links verticales al costado derecho del hero) */
     .side-nav {
